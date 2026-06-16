@@ -1,0 +1,7 @@
+phpMyAdmin/
+uploads/
+.vscode/
+**/node_modules/
+**/dist/
+**/build/
+*.log
