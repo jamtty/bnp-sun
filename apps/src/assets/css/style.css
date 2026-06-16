@@ -93,15 +93,17 @@
 .main-Departments .tit h2 { font-size:4.5rem; font-weight:700; line-height:1.3; }
 .main-Departments .tit p { margin:1.6rem 0 0; font-size:2rem; font-weight:500; color:#333;  }
 .main-Departments .thumb-list { margin:5rem 0 0; display:flex; gap:2.5rem; }
-.main-Departments .thumb-list li { cursor: pointer; position:relative; flex:1; height:42.4rem; overflow:hidden; border-radius:2.5rem; display:flex; align-items: flex-end; background-size:100% auto !important; transition:background-size 0.5s ease-out; }
-.main-Departments .thumb-list li:hover { background-size:110% auto !important; }
-.main-Departments .thumb-list li::after { content:""; position:absolute; width:0.6rem; height:1rem; right:3rem; bottom:3rem; background:url('../images/ico_right_arrow.svg') 50% 50% / contain no-repeat; }
-.main-Departments .thumb-list li:nth-child(1) { background:url('../images/img_Departments_1.svg') 50% 50% / contain no-repeat; }
-.main-Departments .thumb-list li:nth-child(2) { background:url('../images/img_Departments_2.svg') 50% 50% / contain no-repeat; }
-.main-Departments .thumb-list li:nth-child(3) { background:url('../images/img_Departments_3.svg') 50% 50% / contain no-repeat; }
-.main-Departments .thumb-list li:nth-child(4) { background:url('../images/img_Departments_4.svg') 50% 50% / contain no-repeat; }
-.main-Departments .thumb-list li:nth-child(5) { background:url('../images/img_Departments_5.svg') 50% 50% / contain no-repeat; }
-.main-Departments .thumb-list li:nth-child(6) { background:url('../images/img_Departments_6.svg') 50% 50% / contain no-repeat; }
+.main-Departments .thumb-list li { cursor:pointer; position:relative; flex:1; height:42.4rem; overflow:hidden; border-radius:2.5rem; display:flex; align-items:flex-end; }
+.main-Departments .thumb-list li::before { content:""; position:absolute; inset:0; background-position:50% 50%; background-repeat:no-repeat; background-size:100% auto; transition:transform 0.5s ease-out; z-index:0; }
+.main-Departments .thumb-list li:hover::before { transform:scale(1.3); }
+.main-Departments .thumb-list li::after { content:""; position:absolute; width:0.6rem; height:1rem; right:3rem; bottom:3rem; background:url('../images/ico_right_arrow.svg') 50% 50% / contain no-repeat; z-index:2; }
+.main-Departments .thumb-list li:nth-child(1)::before { background-image:url('../images/img_Departments_1.svg'); }
+.main-Departments .thumb-list li:nth-child(2)::before { background-image:url('../images/img_Departments_2.svg'); }
+.main-Departments .thumb-list li:nth-child(3)::before { background-image:url('../images/img_Departments_3.svg'); }
+.main-Departments .thumb-list li:nth-child(4)::before { background-image:url('../images/img_Departments_4.svg'); }
+.main-Departments .thumb-list li:nth-child(5)::before { background-image:url('../images/img_Departments_5.svg'); }
+.main-Departments .thumb-list li:nth-child(6)::before { background-image:url('../images/img_Departments_6.svg'); }
+.main-Departments .thumb-list li p { position:relative; z-index:1; }
 .main-Departments .thumb-list li p { padding:0 2.5rem 4.5rem; font-size:2.4rem; font-weight:500; color:#fff;  }
 .main-Departments .thumb-list li p span { display:block; margin:1.8rem 0 0; font-size:1.4rem; font-weight:400; color:rgba(255,255,255,0.7); }
 
