@@ -1,20 +1,35 @@
 import { Link, useLocation } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import logo from '../../assets/images/logo.svg'
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const { pathname } = useLocation()
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
-    // 경로 변경 시 전체메뉴 닫기
     setIsOpen(false)
   }, [pathname])
+
+  // 마우스가 헤더 영역을 벗어나면 약간의 딜레이 후 닫기
+  const handleMouseLeave = () => {
+    closeTimer.current = setTimeout(() => setIsOpen(false), 120)
+  }
+
+  // 헤더 영역으로 다시 들어오면 닫기 취소
+  const handleMouseEnter = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+    setIsOpen(true)
+  }
 
   const handleToggle = () => setIsOpen((v) => !v)
 
   return (
-    <header className={`header ${isOpen ? 'is-open' : ''}`}>
+    <header
+      className={`header ${isOpen ? 'is-open' : ''}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className='inner'>
         <div className='logo'>
           <Link to='/'><img src={logo} alt='선정형외과 로고' /></Link>
