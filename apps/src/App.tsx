@@ -1,12 +1,21 @@
-﻿import { useState } from 'react'
+﻿import { useState, useEffect } from 'react'
 import './assets/css/common.css'
 import './assets/css/style.css'
 import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 import AppRouter from './router'
+import { useLocation } from 'react-router-dom'
 
 function App() {
   const [isQuickMenuOpen, setIsQuickMenuOpen] = useState(false)
+
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    // 라우트가 변경되면 열려있던 전체/퀵 메뉴를 닫음
+    setIsQuickMenuOpen(false)
+    // 향후 다른 전역 메뉴 상태가 추가되면 여기서 함께 닫도록 확장 가능
+  }, [pathname])
 
   const handleClickTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
