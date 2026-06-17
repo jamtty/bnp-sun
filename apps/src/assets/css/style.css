@@ -21,8 +21,7 @@
 .header .inner .gnb > ul > li:focus-within > a::after { transform:scaleX(1); }
 
 .header .inner .gnb .gnb-2depth { position:absolute; top:9rem; left:50%; transform:translateX(-50%) translateY(-0.8rem); display:flex; flex-direction:column; gap:1rem; width:max-content; min-width:100%; padding-top:3.4rem; z-index:3; opacity:0; visibility:hidden; pointer-events:none; transition:opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease; }
-.header:hover .inner .gnb .gnb-2depth,
-.header:focus-within .inner .gnb .gnb-2depth { opacity:1; visibility:visible; pointer-events:auto; transform:translateX(-50%) translateY(0); }
+.header.is-open .inner .gnb .gnb-2depth { opacity:1; visibility:visible; pointer-events:auto; transform:translateX(-50%) translateY(0); }
 .header .inner .gnb .gnb-2depth > li { display:flex; justify-content:center; }
 .header .inner .gnb .gnb-2depth > li > a { font-size:1.8rem; font-weight:500; color:#555; line-height:1.5; white-space:nowrap; }
 .header .inner .gnb .gnb-2depth > li > a:hover,
@@ -198,8 +197,6 @@
 .btn-reserve:hover { background:linear-gradient(180deg, #545B66 0%, #424854 100%); }
 
 .btn-top { margin:1rem 0 0;  width:8rem; height:8rem; background:#fff url('../images/ico_quick_top.svg') 50% 50% no-repeat; border-radius:1rem; box-shadow:0 0 8.9rem 0 rgba(0,0,0,.25); }
-
-
 
 
 

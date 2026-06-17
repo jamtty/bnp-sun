@@ -1,9 +1,20 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import logo from '../../assets/images/logo.svg'
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false)
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    // 경로 변경 시 전체메뉴 닫기
+    setIsOpen(false)
+  }, [pathname])
+
+  const handleToggle = () => setIsOpen((v) => !v)
+
   return (
-    <header className='header'>
+    <header className={`header ${isOpen ? 'is-open' : ''}`}>
       <div className='inner'>
         <div className='logo'>
           <Link to='/'><img src={logo} alt='선정형외과 로고' /></Link>
@@ -73,7 +84,15 @@ function Header() {
           <ul>
             <li><button type='button' className='btn-my'></button></li>
             <li><button type='button' className='btn-sch'></button></li>
-            <li><button type='button' className='btn-menu'></button></li>
+            <li>
+              <button
+                type='button'
+                className='btn-menu'
+                onClick={handleToggle}
+                aria-expanded={isOpen}
+                aria-label='전체메뉴 열기/닫기'
+              />
+            </li>
           </ul>
         </div>
       </div>
