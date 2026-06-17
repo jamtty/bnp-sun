@@ -14,6 +14,13 @@ function App() {
   useEffect(() => {
     // 라우트가 변경되면 열려있던 전체/퀵 메뉴를 닫음
     setIsQuickMenuOpen(false)
+    // 포커스가 남아있어 :focus-within 기반의 GNB가 유지되는 경우 포커스 제거
+    try {
+      const active = document.activeElement as HTMLElement | null
+      if (active && typeof active.blur === 'function') active.blur()
+    } catch (e) {
+      // 서버 환경 등에서 안전하게 무시
+    }
     // 향후 다른 전역 메뉴 상태가 추가되면 여기서 함께 닫도록 확장 가능
   }, [pathname])
 
