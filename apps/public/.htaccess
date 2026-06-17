@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+  Options -MultiViews
+  RewriteEngine On
+  RewriteBase /
+
+  # 이미 존재하는 파일/디렉터리는 그대로 서빙
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 그 외 모든 요청은 index.html로 포워딩 (SPA 히스토리 모드 지원)
+  RewriteRule . /index.html [L]
+</IfModule>
