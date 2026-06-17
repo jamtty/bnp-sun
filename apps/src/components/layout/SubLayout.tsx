@@ -108,10 +108,10 @@ function SubLayout({ title, children }: SubLayoutProps) {
 
   return (
     <div className='sub-wrap'>
-      {/* 서브 비주얼 */}
+      {/* 서브 비주얼: GNB 메뉴명 표시 */}
       <div className='sub-visual' style={{ backgroundImage: `url(${bg})` }}>
         <div className='inner'>
-          <h2 className='sub-visual-title'>{title}</h2>
+          <h2 className='sub-visual-title'>{section?.label ?? title}</h2>
         </div>
       </div>
 
@@ -174,6 +174,7 @@ function SubLayout({ title, children }: SubLayoutProps) {
       {/* 페이지 콘텐츠 */}
       <div className='sub-content'>
         <div className='inner'>
+          <h2 className='sub-page-title'>{title}</h2>
           {children}
         </div>
       </div>

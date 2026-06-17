@@ -224,6 +224,7 @@
 .sub-lnb-dropdown li a:hover { background:#f4f7fb; color:#2B6AD1; }
 .sub-content { padding:7rem 0; }
 .sub-content .inner { max-width:120rem; margin:0 auto; padding:0 2rem; }
+.sub-page-title { font-size:3.2rem; font-weight:700; color:#222; margin-bottom:3.2rem; }
 /* intro tabs */
 .intro-tabs { display:flex; gap:1.2rem; margin-bottom:4rem; }
 .intro-tab { flex:1; height:5.6rem; border:1px solid #d8dde5; border-radius:0.8rem; background:#f1f1f1; font-size:1.6rem; font-weight:600; color:#888; cursor:pointer; transition:all 0.18s; }
