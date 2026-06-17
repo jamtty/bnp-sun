@@ -79,7 +79,7 @@ const ALL_SECTIONS = Object.values(SECTIONS).map(({ label, path }) => ({ label, 
 
 interface SubLayoutProps {
   title: string
-  children: ReactNode
+  children?: ReactNode
 }
 
 function SubLayout({ title, children }: SubLayoutProps) {
@@ -111,7 +111,7 @@ function SubLayout({ title, children }: SubLayoutProps) {
       {/* 서브 비주얼 */}
       <div className='sub-visual' style={{ backgroundImage: `url(${bg})` }}>
         <div className='inner'>
-          <h2 className='sub-visual-title'>{section?.label ?? title}</h2>
+          <h2 className='sub-visual-title'>{title}</h2>
         </div>
       </div>
 
@@ -121,12 +121,7 @@ function SubLayout({ title, children }: SubLayoutProps) {
           <ul className='sub-lnb-list'>
             {/* 홈 */}
             <li className='sub-lnb-home'>
-              <Link to='/' aria-label='홈으로'>
-                <svg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2.2' strokeLinecap='round' strokeLinejoin='round' aria-hidden='true'>
-                  <path d='M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z' />
-                  <polyline points='9 22 9 12 15 12 15 22' />
-                </svg>
-              </Link>
+              <Link to='/' aria-label='홈으로'></Link>
             </li>
 
             {/* 섹션(1depth) 드롭다운 */}

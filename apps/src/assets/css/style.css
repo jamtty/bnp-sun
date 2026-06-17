@@ -170,7 +170,7 @@
 .footer .copyright p { font-size:1.6rem; font-weight:400; color:#D5D5D5; line-height:2;  }
 .footer .copyright p span { width:0.1rem; height:1.2rem; margin:0 2rem; background:rgba(175,175,175,0.5); display:inline-block; vertical-align: middle; }
 
-.quick-menu { position:fixed; right:7rem; top:29rem; z-index:9999; width:8rem; }
+.quick-menu { position:fixed; right:5rem; top:29rem; z-index:9999; width:8rem; }
 .quick-menu-panel { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; overflow:hidden; max-height:0;  transition:max-height 0.32s ease, opacity 0.18s ease; background:#248CFF; border-top-left-radius:1rem; border-top-right-radius:1rem; }
 .quick-menu.is-open .quick-menu-panel { max-height:40rem;  }
 .quick-menu-item { width:100%; height:8rem; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
@@ -204,28 +204,30 @@
 
 /* sub layout */
 .sub-wrap { padding:9rem 15rem; }
-.sub-visual { width:100%; height:30rem; background-color:#e8eef5; background-repeat:no-repeat; background-position:center; background-size:cover; display:flex; align-items:center; }
-.sub-visual-title { font-size:3.6rem; font-weight:700; color:#fff; text-shadow:0 0.2rem 1.4rem rgba(0,0,0,0.28); }
+.sub-visual { width:100%; height:26rem; background-color:#e8eef5; background-repeat:no-repeat; background-position:center; background-size:cover; display:flex; align-items:center; justify-content: center; border-radius:3rem; }
+.sub-visual-title { font-size:4rem; font-weight:500; color:#fff; }
 /* LNB */
-.sub-lnb { background:#fff; border-bottom:1px solid #e5e9ef; }
-.sub-lnb .inner { max-width:120rem; margin:0 auto; padding:0 2rem; }
 .sub-lnb-list { display:flex; align-items:center; height:5rem; list-style:none; margin:0; padding:0; gap:0; }
 .sub-lnb-home { display:flex; align-items:center; padding-right:2rem; }
-.sub-lnb-home a { display:flex; align-items:center; color:#777; }
+.sub-lnb-home a { width:2rem; height:2rem; display:flex; align-items:center; color:#777; background:url('../images/ico_home.svg') 50% 50% no-repeat; background-size:contain; }
 .sub-lnb-home a:hover { color:#2B6AD1; }
 .sub-lnb-item { position:relative; display:flex; align-items:center; }
 .sub-lnb-home + .sub-lnb-item::before,
 .sub-lnb-item + .sub-lnb-item::before { content:''; display:inline-block; width:1px; height:1.4rem; background:#d0d6de; margin-right:2rem; }
 .sub-lnb-btn { display:flex; align-items:center; gap:0.8rem; font-size:1.4rem; font-weight:500; color:#444; padding:0 2rem 0 0; height:5rem; cursor:pointer; background:none; border:none; white-space:nowrap; }
 .sub-lnb-btn:hover { color:#2B6AD1; }
-.sub-lnb-arrow { display:inline-block; width:0; height:0; border-left:0.42rem solid transparent; border-right:0.42rem solid transparent; border-top:0.52rem solid currentColor; transition:transform 0.2s ease; flex-shrink:0; }
+.sub-lnb-arrow { margin-left:10rem; width:1rem; height:0.5rem; background:url('../images/ico_down_arrow.svg') 50% 50% no-repeat;  transition:transform 0.2s ease; flex-shrink:0; background-size:contain; }
 .sub-lnb-item.is-open .sub-lnb-arrow { transform:rotate(180deg); }
 .sub-lnb-dropdown { position:absolute; top:calc(100% + 1px); left:0; min-width:16rem; background:#fff; border:1px solid #e0e5ea; border-radius:0.6rem; box-shadow:0 0.6rem 2rem rgba(0,0,0,0.1); z-index:9999; display:none; list-style:none; margin:0; padding:0.6rem 0; }
 .sub-lnb-item.is-open .sub-lnb-dropdown { display:block; }
 .sub-lnb-dropdown li a { display:block; padding:0.9rem 1.8rem; font-size:1.4rem; color:#555; white-space:nowrap; }
 .sub-lnb-dropdown li a:hover { background:#f4f7fb; color:#2B6AD1; }
-.sub-content { padding:8rem 0; }
+.sub-content { padding:7rem 0; }
 .sub-content .inner { max-width:120rem; margin:0 auto; padding:0 2rem; }
+/* intro tabs */
+.intro-tabs { display:flex; gap:1.2rem; margin-bottom:4rem; }
+.intro-tab { flex:1; height:5.6rem; border:1px solid #d8dde5; border-radius:0.8rem; background:#f1f1f1; font-size:1.6rem; font-weight:600; color:#888; cursor:pointer; transition:all 0.18s; }
+.intro-tab.is-active { border-color:#2B6AD1; background:#fff; color:#2B6AD1; }
 
 
 
