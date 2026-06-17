@@ -119,9 +119,9 @@
 .main-Departments .thumb-list li p span { display:block; margin:1.8rem 0 0; font-size:1.4rem; font-weight:400; color:rgba(255,255,255,0.7); }
 
 .main-banner { margin:9rem 0 0; padding:0 15rem; }
-.main-banner .inner { position:relative; height:20rem; background:#003384 url('../images/img_main_bg.svg') 50% 50% / cover no-repeat; border-radius:3rem; overflow:hidden; }
+.main-banner .inner { position:relative; height:20rem; background:#003384 url('../images/img_main_bg.svg') 50% 50% / cover no-repeat; border-radius:3rem; background-size:cover; }
 .main-banner .inner .bg { position:absolute; left:12rem; bottom:0; width:41.7rem; height:23.9rem; object-fit:contain; pointer-events:none; z-index:2; }
-.main-banner .inner .txt { position:absolute; top:50%; left:57rem; transform:translateY(-50%); z-index:1; width:100%; }
+.main-banner .inner .txt { position:absolute; top:50%; left:0; padding-left:57rem; transform:translateY(-50%); z-index:1; width:100%; }
 .main-banner .inner .txt h3 { font-size:4.5rem; font-weight:700; color:#fff; line-height:1.2; }
 .main-banner .inner .txt p { margin:1.6rem 0 0; font-size:2rem; font-weight:500; color:rgba(255,255,255,0.9); }
 
