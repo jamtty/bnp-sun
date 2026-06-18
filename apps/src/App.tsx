@@ -12,9 +12,9 @@ function App() {
   const { pathname } = useLocation()
 
   useEffect(() => {
-    // 라우트가 변경되면 열려있던 전체/퀵 메뉴를 닫음
+    // 라우트가 변경되면 열려있던 전체/퀵 메뉴를 닫고 최상단으로 이동
     setIsQuickMenuOpen(false)
-    // 포커스가 남아있어 :focus-within 기반의 GNB가 유지되는 경우 포커스 제거
+    window.scrollTo({ top: 0, behavior: 'instant' })
     try {
       const active = document.activeElement as HTMLElement | null
       if (active && typeof active.blur === 'function') active.blur()
