@@ -223,14 +223,12 @@
 .sub-lnb-dropdown li a { display:block; padding:0.9rem 1.8rem; font-size:1.4rem; color:#555; white-space:nowrap; }
 .sub-lnb-dropdown li a:hover { background:#f4f7fb; color:#2B6AD1; }
 .sub-content { padding:5rem 0; }
-.sub-content .inner {  }
 .sub-page-title { font-size:4.5rem; font-weight:600; color:#222; margin-bottom:8rem; }
 /* intro tabs */
 .intro-tabs { display:flex; gap:1.5rem; margin-bottom:8rem; }
 .intro-tab { flex:1; height:7rem; border:1px solid #EDEDED; border-radius:1rem; background:#F0F0F0; font-size:2rem; font-weight:600; color:#333; cursor:pointer; transition:all 0.18s; }
 .intro-tab.is-active { border-color:#2B6AD1; background:#fff; color:#2B6AD1; }
 /* doctor card */
-.doctor-list {  }
 .doctor-card { display:flex; gap:6rem; margin:0 0 9rem; }
 .doctor-card-photo { width:50%; border-radius:2rem; overflow:hidden;  }
 .doctor-card-photo img { width:48.5rem; height:auto; display:block; margin:0 auto; }
@@ -238,7 +236,6 @@
 .doctor-card-hospital { font-size:2rem; font-weight:600; color:#2B6AD1; margin-bottom:0.1rem; }
 .doctor-card-name { font-size:3.6rem; font-weight:700; color:#111; margin-bottom:4.6rem; }
 .doctor-card-sections { display:flex; flex-direction:column; gap:2.4rem; }
-.doctor-card-section {  }
 .doctor-card-section-label { line-height:3.2rem; display:inline-block; font-size:1.6rem; font-weight:600; color:#fff; background:#33363D; border-radius:0.6rem; padding:0 1.5rem; height:fit-content; text-align:center; white-space:nowrap; margin:0 0 1rem;  }
 .doctor-card-section-list { flex:1; list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0.4rem; }
 .doctor-card-section-list li { font-size:1.6rem; color:#333; line-height:1.7; }
