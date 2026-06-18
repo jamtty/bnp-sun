@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import HomePage from '../pages/home/HomePage'
 import IntroPage from '../pages/about/IntroPage'
 import NoticePage from '../pages/about/NoticePage'
+import NoticeDetailPage from '../pages/about/NoticeDetailPage'
 import EquipmentPage from '../pages/about/EquipmentPage'
 import LocationPage from '../pages/about/LocationPage'
 import SchedulePage from '../pages/about/SchedulePage'
@@ -34,6 +35,7 @@ function AppRouter() {
       {/* 병원소개 */}
       <Route path='/about/intro' element={<IntroPage />} />
       <Route path='/about/notice' element={<NoticePage />} />
+      <Route path='/about/notice/:id' element={<NoticeDetailPage />} />
       <Route path='/about/equipment' element={<EquipmentPage />} />
       <Route path='/about/location' element={<LocationPage />} />
       <Route path='/about/schedule' element={<SchedulePage />} />

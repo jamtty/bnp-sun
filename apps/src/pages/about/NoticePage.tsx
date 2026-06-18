@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import SubLayout from '../../components/layout/SubLayout'
 import imgNoticeSample from '../../assets/images/img_notice_sample.svg'
 
@@ -12,58 +13,58 @@ interface NoticeItem {
 
 const INITIAL_NOTICES: NoticeItem[] = [
   {
-    id: 1,
-    title: '6월 전국동시지방선거일 정상진료 안내',
-    date: '2026.05.22',
+    id: 3,
+    title: '석가탄신일 대체휴일 정상진료 안내',
+    date: '2026.05.25',
     author: '관리자',
     image: imgNoticeSample,
   },
   {
     id: 2,
-    title: '6월 전국동시지방선거일 정상진료 안내',
+    title: '2026년 6월 진료일정 안내',
     date: '2026.05.22',
     author: '관리자',
     image: imgNoticeSample,
   },
   {
-    id: 3,
+    id: 1,
     title: '6월 전국동시지방선거일 정상진료 안내',
-    date: '2026.05.22',
+    date: '2026.05.20',
     author: '관리자',
     image: imgNoticeSample,
   },
   {
     id: 4,
-    title: '6월 전국동시지방선거일 정상진료 안내',
-    date: '2026.05.22',
+    title: '서울선정형외과 병원 이전 및 확장 안내',
+    date: '2026.05.15',
     author: '관리자',
     image: imgNoticeSample,
   },
   {
     id: 5,
-    title: '6월 전국동시지방선거일 정상진료 안내',
-    date: '2026.05.22',
+    title: '정형외과 전문의 추가 초빙 및 4인 진료 개시',
+    date: '2026.05.10',
     author: '관리자',
     image: imgNoticeSample,
   },
   {
     id: 6,
-    title: '6월 전국동시지방선거일 정상진료 안내',
-    date: '2026.05.22',
+    title: '도수치료/물리치료 센터 리뉴얼 및 확대 오픈',
+    date: '2026.05.05',
     author: '관리자',
     image: imgNoticeSample,
   },
   {
     id: 7,
-    title: '6월 전국동시지방선거일 정상진료 안내',
-    date: '2026.05.22',
+    title: '척추 관절 비수술 통합 치료 프로그램 안내',
+    date: '2026.04.28',
     author: '관리자',
     image: imgNoticeSample,
   },
   {
     id: 8,
-    title: '6월 전국동시지방선거일 정상진료 안내',
-    date: '2026.05.22',
+    title: '독감 예방접종 및 대상포진 백신 할인 이벤트',
+    date: '2026.04.15',
     author: '관리자',
     image: imgNoticeSample,
   },
@@ -98,19 +99,19 @@ function NoticePage() {
       <div className='notice-grid'>
         {filteredNotices.length > 0 ? (
           filteredNotices.map((notice, idx) => (
-            <div key={idx} className='notice-card'>
-              <div className='notice-card-img-wrap'>
-                <img src={notice.image} alt={notice.title} className='notice-card-img' />
-              </div>
-              <div className='notice-card-info'>
-                <h3 className='notice-card-title'>{notice.title}</h3>
-                <div className='notice-card-meta'>
-                  <span className='notice-card-date'>{notice.date}</span>
-                  <span className='notice-card-divider'>|</span>
-                  <span className='notice-card-author'>{notice.author}</span>
+              <Link key={idx} to={`/about/notice/${notice.id}`} className='notice-card'>
+                <div className='notice-card-img-wrap'>
+                  <img src={notice.image} alt={notice.title} className='notice-card-img' />
                 </div>
-              </div>
-            </div>
+                <div className='notice-card-info'>
+                  <h3 className='notice-card-title'>{notice.title}</h3>
+                  <div className='notice-card-meta'>
+                    <span className='notice-card-date'>{notice.date}</span>
+                    <span className='notice-card-divider'>|</span>
+                    <span className='notice-card-author'>{notice.author}</span>
+                  </div>
+                </div>
+              </Link>
           ))
         ) : (
           <div className='notice-empty'>검색 결과가 없습니다.</div>

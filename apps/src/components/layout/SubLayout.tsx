@@ -86,7 +86,13 @@ function SubLayout({ title, children }: SubLayoutProps) {
   const { pathname } = useLocation()
   const sectionKey = pathname.split('/')[1] || ''
   const section = SECTIONS[sectionKey]
-  const currentPage = section?.children.find((c) => c.path === pathname)
+  // 상세페이지 경로(/about/notice/:id)에서도 LNB의 현재 페이지가 '공지사항'으로 매칭되도록 처리
+  const currentPage = section?.children.find((c) => {
+    if (c.path === '/about/notice' && pathname.startsWith('/about/notice')) {
+      return true
+    }
+    return c.path === pathname
+  })
 
   const [sectionOpen, setSectionOpen] = useState(false)
   const [pageOpen,    setPageOpen]    = useState(false)
