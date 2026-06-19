@@ -624,6 +624,170 @@
 
 .nodata { text-align:center; font-size:1.8rem; color:#999; }
 
+/* equipment page */
+.equipment-list-wrapper {
+  margin-top: 2rem;
+}
+.equipment-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+.equipment-card {
+  display: flex;
+  flex-direction: column;
+}
+.equipment-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height:40rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin-bottom: 2.4rem;
+}
+.equipment-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.equipment-card-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5rem;
+}
+.equipment-card-name {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+.equipment-card-desc {
+  font-size: 1.6rem;
+  color: #555;
+  line-height: 1.65;
+  font-weight: 400;
+  word-break: keep-all;
+}
+
+@media (max-width: 1024px) {
+  .equipment-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .equipment-list {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+}
+
+/* location page */
+.location-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 9rem;
+}
+.location-section-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 2rem;
+}
+.location-section-dot {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background: #2B6AD1;
+  flex-shrink: 0;
+}
+.location-map-wrap {
+  width: 100%;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+.location-map {
+  width: 100%;
+  height: 62rem;
+  border: 0;
+  display: block;
+}
+.location-info-row {
+  display: flex;
+  gap: 20rem;
+  background:#FAFAFA;
+  border-radius: 2rem;
+  padding:6rem 10rem;
+}
+.location-schedule {
+  flex: 0 0 auto;
+  min-width: 28rem;
+}
+.location-address {
+  flex: 1;
+}
+.location-info-title {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #2B6AD1;
+  margin-bottom: 1.8rem;
+}
+.location-schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.location-schedule-item {
+  display: flex;
+  gap: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+.location-schedule-item dt {
+  width: 13rem;
+  flex-shrink: 0;
+  font-weight: 500;
+  color: #222;
+}
+.location-schedule-item dd {
+  font-weight: 700;
+}
+.location-schedule-note {
+  font-size: 1.4rem;
+  color: #888;
+}
+.location-schedule-note.is-red {
+  color: #D94F4F;
+  font-weight: 500;
+}
+.location-address-text {
+  font-size: 2rem;
+  color: #333;
+  line-height: 1.7;
+  font-weight: 700;
+  word-break: keep-all;
+}
+
+@media (max-width: 768px) {
+  .location-info-row {
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+  .location-schedule {
+    min-width: 0;
+  }
+  .location-map {
+    height: 26rem;
+  }
+}
+
 
 
 
