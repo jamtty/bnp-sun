@@ -241,6 +241,44 @@
 .doctor-card-section-list li { font-size:1.6rem; color:#333; line-height:1.7; }
 .doctor-card-section-spacer { height:2rem; }
 
+/* schedule page */
+.sch-list { display:flex; flex-direction:column; gap:10rem; }
+.sch-card { display:flex; gap:6rem; align-items:flex-start; }
+.sch-card-photo { flex-shrink:0; width:60rem; border-radius:2rem; overflow:hidden; }
+.sch-card-photo img { width:30rem; height:auto; display:block; margin:0 auto;  }
+.sch-card-info { flex:1; min-width:0; }
+.sch-card-notice { font-size:1.8rem; color:#444; margin-bottom:3.8rem;  }
+.sch-card-hospital { font-size:2rem; font-weight:600; color:#2B6AD1; margin-bottom:0.6rem; }
+.sch-card-name { font-size:3.6rem; font-weight:700; color:#111; margin-bottom:3rem; display:flex; align-items:baseline; gap:1.2rem; flex-wrap:wrap; }
+.sch-card-name-note { font-size:1.8rem; font-weight:700; color:#222; letter-spacing:-0.01em; }
+.sch-table-wrap { border-top:1px solid #DBDBDB; margin:2.8rem 0 0; padding-top:4.5rem; }
+.sch-table-legend { display:flex; align-items:center; justify-content:space-between; padding:0 0 2rem; font-size:2.4rem; font-weight:700; color:#222; }
+.sch-legend-list { display:flex; align-items:center; gap:3rem; }
+.sch-legend-item { display:flex; align-items:center; gap:1rem; font-size:1.6rem; font-weight:500; color:#444; }
+.sch-dot { display:inline-block; width:2.5rem; height:2.5rem; border-radius:50%; flex-shrink:0; }
+.sch-table-border { border:1px solid #BFBFBF; border-radius:2rem; overflow:hidden; }
+.sch-table { width:100%; border-collapse:collapse; table-layout:fixed; }
+.sch-table thead tr { background:#2B6AD1; }
+.sch-table thead th { padding:1.6rem 0; font-size:2rem; font-weight:500; color:#fff; text-align:center; letter-spacing:-0.01em; }
+.sch-table thead .sch-th-empty { width:9rem; }
+.sch-row-label { text-align:center; font-size:2.4rem; font-weight:500; color:#444; padding:2rem 0; }
+.sch-cell { text-align:center; padding:1.8rem 0; }
+
+/* vein calendar */
+.sch-cal { border:1px solid #BFBFBF; border-radius:2rem; overflow:hidden; }
+.sch-cal-header { display:flex; align-items:center; justify-content:space-between; padding:5rem 5rem 3rem;  }
+.sch-cal-title { font-size:2.4rem; font-weight:700; color:#111; }
+.sch-cal-nav { display:flex; align-items:center; gap:3rem; }
+.sch-cal-btn { width:3.2rem; height:3.2rem;  }
+.sch-cal-btn.prev { background:url('../images/ico_calendar_prev.svg') 50% 50% no-repeat; background-size:1rem; }
+.sch-cal-btn.next { background:url('../images/ico_calendar_next.svg') 50% 50% no-repeat; background-size:1rem; }
+.sch-cal-grid { display:grid; grid-template-columns:repeat(7, 1fr); gap:0.5rem; padding:0 5rem 5rem; }
+.sch-cal-dow { text-align:center; padding:0 0 1.5rem; font-size:1.8rem; font-weight:500; color:#555;  }
+.sch-cal-day { min-height:9.4rem; padding:2rem; display:flex; flex-direction:column; align-items:center; gap:0.6rem; background:#FAFAFA; }
+.sch-cal-day:nth-child(7n) { border-right:none; }
+.sch-cal-day.is-empty { background:#FAFBFC; }
+.sch-cal-date { font-size:1.6rem; font-weight:500; color:#333; align-self:flex-start; }
+
 /* notice page */
 .notice-header-row {
   display: flex;
