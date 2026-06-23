@@ -676,6 +676,19 @@
 .tour-thumb-swiper .swiper-slide img { width:100%; height:30rem; object-fit:cover; display:block; }
 .tour-thumb-swiper .swiper-slide-thumb-active { opacity:1;  }
 
+/* non-covered page */
+.nc-scroll { overflow-x: auto; width: 100%; }
+.nc-table { width: 100%; border-collapse: collapse; font-size: 1.35rem; border-bottom: 4px solid #EC9E52; min-width: 110rem; }
+.nc-table thead tr:first-child th { border-top: 4px solid #EC9E52; }
+.nc-table th { background: #F7F7F7; border: 1px solid #CCCCCC; padding: 0.8rem 0.5rem; text-align: center; font-weight: 600; color: #333; vertical-align: middle; line-height: 1.55; font-size: 1.3rem; }
+.nc-table td { border: 1px solid #E0E0E0; padding: 0.7rem 0.6rem; text-align: center; vertical-align: middle; color: #444; font-size: 1.3rem; line-height: 1.55; word-break: keep-all; }
+.nc-table .nc-cat { background: #FAFAFA; font-weight: 600; color: #333; }
+.nc-table .nc-r { text-align: right; padding-right: 0.8rem; }
+.nc-table .nc-check { color: #2B6AD1; font-weight: 700; font-size: 1.5rem; }
+.nc-table .nc-date { vertical-align: top; padding-top: 1.2rem; font-size: 1.25rem; color: #555; line-height: 1.8; }
+.nc-table .nc-date span { display: block; font-size: 1.15rem; color: #888; }
+.nc-table tbody tr:hover td { background: rgba(236, 158, 82, 0.05); }
+
 /* equipment page */
 .equipment-list-wrapper {
   margin-top: 2rem;

@@ -45,6 +45,7 @@ function Header() {
                 <li><Link to='/about/location'>진료시간·오시는 길</Link></li>
                 <li><Link to='/about/schedule'>진료 일정</Link></li>
                 <li><Link to='/about/tour'>병원 둘러보기</Link></li>
+                <li><Link to='/about/non-covered'>비급여 안내</Link></li>
               </ul>
             </li>
             <li>

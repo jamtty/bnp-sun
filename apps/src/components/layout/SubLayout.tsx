@@ -22,6 +22,7 @@ const SECTIONS: Record<string, SectionDef> = {
       { label: '진료시간·오시는 길', path: '/about/location' },
       { label: '진료 일정',          path: '/about/schedule' },
       { label: '병원 둘러보기',      path: '/about/tour' },
+      { label: '비급여 안내',        path: '/about/non-covered' },
     ],
   },
   pain: {

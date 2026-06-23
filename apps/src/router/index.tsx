@@ -7,6 +7,7 @@ import EquipmentPage from '../pages/about/EquipmentPage'
 import LocationPage from '../pages/about/LocationPage'
 import SchedulePage from '../pages/about/SchedulePage'
 import TourPage from '../pages/about/TourPage'
+import NonCoveredPage from '../pages/about/NonCoveredPage'
 import InjectionPage from '../pages/pain/InjectionPage'
 import ShockwavePage from '../pages/pain/ShockwavePage'
 import ManualPage from '../pages/pain/ManualPage'
@@ -40,6 +41,7 @@ function AppRouter() {
       <Route path='/about/location' element={<LocationPage />} />
       <Route path='/about/schedule' element={<SchedulePage />} />
       <Route path='/about/tour' element={<TourPage />} />
+      <Route path='/about/non-covered' element={<NonCoveredPage />} />
 
       {/* 만성통증클리닉 */}
       <Route path='/pain/injection' element={<InjectionPage />} />
