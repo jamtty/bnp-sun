@@ -6,17 +6,25 @@ function NonCoveredPage() {
       <div className='nc-scroll'>
         <table className='nc-table'>
           <colgroup>
-            <col style={{ width: '10%' }} /><col style={{ width: '10%' }} /><col style={{ width: '8%' }} />
-            <col style={{ width: '10%' }} /><col style={{ width: '5%' }} /><col style={{ width: '7%' }} />
-            <col style={{ width: '7%' }} /><col style={{ width: '7%' }} /><col style={{ width: '5%' }} />
-            <col style={{ width: '5%' }} /><col style={{ width: '11%' }} /><col style={{ width: '8%' }} />
+            <col style={{ width: '10%' }} />
+            <col style={{ width: '10%' }} />
+            <col style={{ width: '8%' }} />
+            <col style={{ width: '10%' }} />
+            <col style={{ width: '5%' }} />
+            <col style={{ width: '7%' }} />
+            <col style={{ width: '7%' }} />
+            <col style={{ width: '7%' }} />
+            <col style={{ width: '10%' }} />
+            <col style={{ width: '10%' }} />
+            <col style={{ width: '8%' }} />
+            <col style={{ width: '8%' }} />
           </colgroup>
           <thead>
             <tr>
               <th rowSpan={3}>중분류</th><th rowSpan={3}>소분류</th>
               <th colSpan={2}>항 목</th>
               <th colSpan={6}>진료 비용 (단위 : 원)</th>
-              <th rowSpan={3}>특이사항</th><th rowSpan={3}>최종<br />변경일</th>
+              <th rowSpan={3}>특이사항</th><th rowSpan={3}>최종 변경일</th>
             </tr>
             <tr>
               <th rowSpan={2}>코드</th><th rowSpan={2}>명칭</th><th rowSpan={2}>구분</th>
@@ -28,7 +36,7 @@ function NonCoveredPage() {
           <tbody>
             {/* ── 초음파 검사료 ── 12행 */}
             <tr>
-              <td rowSpan={12} className='nc-cat'>초음파<br />검사료<br />(진단초음파)</td>
+              <td rowSpan={12}>초음파<br />검사료<br />(진단초음파)</td>
               <td>근골격,연부-연부조직 초음파</td><td>EB470</td><td>일반, 경추, 요추</td><td></td>
               <td className='nc-r'>50,000</td><td className='nc-r'>50,000</td><td className='nc-r'>70,000</td>
               <td></td><td></td><td></td>
@@ -60,14 +68,14 @@ function NonCoveredPage() {
 
             {/* ── 기능검사료 ── 1행 */}
             <tr>
-              <td className='nc-cat'>기능검사료<br />(순환기 기능 검사)</td>
+              <td>기능검사료<br />(순환기 기능 검사)</td>
               <td>동맥경화도검사</td><td>EZ868</td><td>ABI</td><td></td>
               <td className='nc-r'>30,000</td><td></td><td></td><td></td><td></td><td></td>
             </tr>
 
             {/* ── 이학요법료 ── 4행 */}
             <tr>
-              <td rowSpan={4} className='nc-cat'>이학요법료</td>
+              <td rowSpan={4}>이학요법료</td>
               <td>도수치료</td><td>MX122</td><td>도수치료</td><td></td><td></td>
               <td className='nc-r'>50,000</td><td className='nc-r'>200,000</td><td></td><td></td><td></td>
             </tr>
@@ -86,7 +94,7 @@ function NonCoveredPage() {
 
             {/* ── 처치 및 수술료(근골) ── 3행 */}
             <tr>
-              <td rowSpan={3} className='nc-cat'>처치 및<br />수술료(근골)</td>
+              <td rowSpan={3}>처치 및<br />수술료(근골)</td>
               <td>체외충격파치료</td><td>SZ084</td><td>충격파</td><td></td><td></td>
               <td className='nc-r'>50,000</td><td className='nc-r'>150,000</td><td></td><td></td><td></td>
             </tr>
@@ -101,7 +109,7 @@ function NonCoveredPage() {
 
             {/* ── 처치 및 수술료(순환기) ── 5행 */}
             <tr>
-              <td rowSpan={5} className='nc-cat'>처치 및<br />수술료<br />(순환기)</td>
+              <td rowSpan={5}>처치 및<br />수술료<br />(순환기)</td>
               <td>초음파 유도하 혈관경화요법</td><td>OZ305</td><td>경화요법</td><td></td>
               <td className='nc-r'>250,000</td><td></td><td></td>
               <td className='nc-check'>○</td><td className='nc-check'>○</td><td>684900040 파이브로베인주1%</td>
@@ -128,14 +136,14 @@ function NonCoveredPage() {
 
             {/* ── 처치 및 수술료(기타) ── 1행 */}
             <tr>
-              <td className='nc-cat'>처치 및 수술료(기타)</td>
+              <td>처치 및 수술료(기타)</td>
               <td>경두개자기자극술</td><td>QZ962</td><td>TMS</td><td></td><td></td>
               <td className='nc-r'>100,000</td><td className='nc-r'>200,000</td><td></td><td></td><td></td>
             </tr>
 
             {/* ── 주사 및 약제료 ── 4행 */}
             <tr>
-              <td rowSpan={4} className='nc-cat'>주사 및<br />약제료</td>
+              <td rowSpan={4}>주사 및<br />약제료</td>
               <td rowSpan={4}></td><td rowSpan={4}></td>
               <td>통증 수액주사</td><td></td><td></td>
               <td className='nc-r'>100,000</td><td className='nc-r'>250,000</td><td></td><td></td><td></td>
@@ -146,7 +154,7 @@ function NonCoveredPage() {
 
             {/* ── 예방접종료 ── 1행 */}
             <tr>
-              <td className='nc-cat'>예방접종료</td>
+              <td>예방접종료</td>
               <td>대상포진</td><td>3Z5200303</td><td>싱그릭스</td><td></td>
               <td className='nc-r'>250,000</td><td className='nc-r'>250,000</td><td className='nc-r'>480,000</td>
               <td></td><td></td><td>1차 접종시 25만원<br />1, 2차 모두 접종시 48만원</td>
@@ -154,7 +162,7 @@ function NonCoveredPage() {
 
             {/* ── 제증명 수수료 ── 14행 */}
             <tr>
-              <td rowSpan={14} className='nc-cat'>제증명<br />수수료</td>
+              <td rowSpan={14}>제증명<br />수수료</td>
               <td>진단서(일반)</td><td>PDZ010000</td><td>진단서 (일반)</td><td></td>
               <td className='nc-r'>10,000</td><td></td><td></td><td></td><td></td><td></td>
             </tr>
@@ -195,7 +203,7 @@ function NonCoveredPage() {
 
             {/* ── 치료재료대 ── 17행 */}
             <tr>
-              <td rowSpan={17} className='nc-cat'>치료재료대</td>
+              <td rowSpan={17}>치료재료대</td>
               <td rowSpan={17}>-</td><td rowSpan={17}></td>
               <td>프로힐</td><td></td><td className='nc-r'>70,000</td><td></td><td></td><td></td><td></td><td></td>
             </tr>
